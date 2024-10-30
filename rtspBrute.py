@@ -57,14 +57,14 @@ class RtspBrute(object):
         print("Finished all threads")
 
     def vaild_target(self, target):
-        regex = re.compile(
-            r"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$")
-        result = re.search(regex, target)
-        if result:
-            return result[0]
-        else:
-            return None
-
+#        regex = re.compile(
+#            r"^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$")
+#       result = re.search(regex, target)
+#       if result:
+#           return result[0]
+#       else:
+#           return None
+        return target    
     def param_to_list(self, param, method=""):
         list = set()
         path = Path(param)
